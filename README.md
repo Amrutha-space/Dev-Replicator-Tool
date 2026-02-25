@@ -10,6 +10,13 @@ DevReplicator clones a GitHub repository, detects its project type (Python, Node
 
 ---
 
+##  Live Demo
+DevReplicator is publicly deployed and accessible.
+
+-- Experience DevReplicator in action:
+🔗 https://dev-replicator-tool.onrender.com
+
+
 ## Requirements
 
 | Dependency | Version   |
@@ -149,9 +156,3 @@ docker stop <container-name>
 # Remove the container
 docker rm -f <container-name>
 ```
-
----
-
-## License
-
-MIT
