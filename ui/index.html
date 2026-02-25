@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevReplicator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo">
+        <span class="logo-title">Dev Replicator</span>
+        <span class="logo-sub">One Command - Many Environments</span>
+      </div>
+      <span class="version-badge">v1.0.0</span>
+    </header>
+
+    <div class="status-bar">
+      <div class="status-dot"></div>
+      <span>Environment Ready</span>
+    </div>
+
+    <!-- Input -->
+    <div class="card">
+      <div class="card-header">
+        <div class="dot"></div>
+        Repository Source
+      </div>
+      <div class="card-body">
+        <div class="input-row">
+          <input
+            id="urlInput"
+            class="url-input"
+            type="text"
+            placeholder="https://github.com/owner/repository"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button id="runBtn" class="btn btn-primary" onclick="startReplication()">
+            ▶ Replicate
+          </button>
+          <button class="btn btn-ghost" onclick="resetUI()">Reset</button>
+        </div>
+
+        <div class="progress-wrap" id="progressWrap">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-label" id="progressLabel">Initializing …</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Console -->
+    <div class="card">
+      <div class="card-header">
+        <div class="dot"></div>
+        Output Log
+      </div>
+      <div class="card-body" style="padding: 0;">
+        <div class="console" id="console">
+          <div class="log-line dim">
+            <span class="log-ts">--:--:--</span>
+            <span class="log-icon">·</span>
+            <span class="log-msg">Awaiting repository source …</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result panel -->
+    <div class="result-panel" id="resultPanel">
+      <div class="card">
+        <div class="card-header">
+          <div class="dot"></div>
+          Build Results
+        </div>
+        <div class="card-body">
+          <div class="result-grid" id="resultGrid"></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 1rem;">
+        <div class="card-header">
+          <div class="dot"></div>
+          Useful Commands
+        </div>
+        <div class="card-body">
+          <div class="cmd-list" id="cmdList"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>DevReplicator · A Tool for Developers with Love </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
