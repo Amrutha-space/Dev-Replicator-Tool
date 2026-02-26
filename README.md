@@ -1,6 +1,6 @@
 # DevReplicator
-
-> Instantly replicate any GitHub repository as a Docker dev environment.
+- A tool which gives info about what requirements to be downloaded and what installation need to done before running a project.
+- Instantly replicate any GitHub repository as a Docker dev environment.
 
 ---
 
@@ -10,10 +10,16 @@ DevReplicator clones a GitHub repository, detects its project type (Python, Node
 
 ---
 
-##  Live Demo
+## Why I Built This
+
+I often faced issues when cloning repositories that lacked setup documentation. 
+DevReplicator was built to eliminate manual dependency setup and instantly containerize projects.
+
+
+-- Experience DevReplicator :
 DevReplicator is publicly deployed and accessible.
 
--- Experience DevReplicator in action:
+##  Live Demo
 🔗 https://dev-replicator-tool.onrender.com
 
 
